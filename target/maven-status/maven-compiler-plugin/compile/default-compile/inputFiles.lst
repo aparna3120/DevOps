@@ -1,1 +1,6 @@
 D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\controller\LoginController.java
+D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\controller\ProductController.java
+D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\model\Product.java
+D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\model\UserRegister.java
+D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\model\UserLogin.java
+D:\DT_WorkSpace\jewellery\src\main\java\com\jewel\dao\ProductDAO.java

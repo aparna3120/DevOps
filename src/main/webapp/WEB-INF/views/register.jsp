@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +79,7 @@ input::-webkit-input-placeholder {
     </style>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript">
+   <script type="text/javascript">
         window.alert = function(){};
         var defaultCSS = document.getElementById('bootstrap-css');
         function changeCSS(css){
@@ -91,7 +91,7 @@ input::-webkit-input-placeholder {
           window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
         });
     </script>
- --></head>
+ </head>
 <body>
 	<!DOCTYPE html>
 <html lang="en">
@@ -109,7 +109,7 @@ input::-webkit-input-placeholder {
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
-		<title>Admin</title>
+		<title>Register Form</title>
 	</head>
 	<body background="resources/image/background2.jpg">
 		<div class="container">
@@ -121,7 +121,7 @@ input::-webkit-input-placeholder {
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
+					<form:form class="form-horizontal" method="post" action="Success" name="register" commandName="userregister">
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Enter your First Name</label>
@@ -181,6 +181,16 @@ input::-webkit-input-placeholder {
 								</div>
 							</div>
 						</div>
+						<div class="form-group">
+							<label for="contact" class="cols-sm-2 control-label">Contact Number</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password"/>
+								</div>
+							</div>
+						</div>
+						
 
 						<div class="form-group ">
 							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
@@ -188,7 +198,7 @@ input::-webkit-input-placeholder {
 						<div class="login-register">
 				            <a href="index.php">Login</a>
 				         </div>
-					</form>
+					</form:form>
 				</div>
 			</div>
 		</div>
@@ -196,8 +206,9 @@ input::-webkit-input-placeholder {
 		<!-- script type="text/javascript" src="assets/js/bootstrap.js"></script> -->
 	</body>
 </html>
-	<!--  <script type="text/javascript"> -->
+	 <script type="text/javascript"> 
 	
 	</script>
-</body>
+ 
+ </body>
 </html>

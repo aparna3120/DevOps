@@ -31,6 +31,7 @@
     <li><a href="https://plus.google.com/" class="btn btn-social-icon btn-lg btn-dropbox"><i class="fa fa-google-plus"></i></a></li>
     </ul>
   </div>
+  
 </nav>
 </footer>
 </body>
