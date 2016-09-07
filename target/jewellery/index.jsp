@@ -33,6 +33,7 @@
         <img src="resources/image/bangle1.jpg"  class="img-rounded"  style="width:200px;height:200px" align="left">
     </div>
     </div>
+    
 
 <%@include file="/WEB-INF/views/Common-Footer.jsp" %>
 </body>

@@ -2,7 +2,7 @@ package com.jewel.model;
 
 public class UserLogin {
 	private String email, password;
-
+	
 	public String getEmail() {
 		return email;
 	}
@@ -17,6 +17,11 @@ public class UserLogin {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public UserLogin() {
+		
+		// TODO Auto-generated constructor stub
 	}
 
 

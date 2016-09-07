@@ -3,6 +3,10 @@ package com.jewel.model;
 public class UserRegister {
 private String fname,lname,email,username,password;
 private long contact_no;
+
+public UserRegister(){
+	
+}
 public String getFname() {
 	return fname;
 }
@@ -39,5 +43,6 @@ public long getContact_no() {
 public void setContact_no(long contact_no) {
 	this.contact_no = contact_no;
 }
+
 
 }

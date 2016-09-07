@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="/WEB-INF/views/Common-Header.jsp" %>
 <center><b><h1>About Us</h1></b></center>
    Established in 2014, Aahushan is India's No.1 online jewellery destination that showcases high quality fine jewellery with strikingly exquisite designs.
 

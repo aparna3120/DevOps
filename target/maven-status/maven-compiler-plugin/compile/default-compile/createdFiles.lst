@@ -1,0 +1,6 @@
+com\jewel\controller\ProductController.class
+com\jewel\dao\ProductDAO.class
+com\jewel\model\UserRegister.class
+com\jewel\model\Product.class
+com\jewel\model\UserLogin.class
+com\jewel\controller\LoginController.class

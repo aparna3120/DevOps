@@ -2,6 +2,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+
+<script type="text/javascript">
+window.alert = function(){};
+var defaultCSS = document.getElementById('bootstrap-css');
+function changeCSS(css){
+    if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+    else $('head > link').filter(':first').replaceWith(defaultCSS); 
+}
+$( document ).ready(function() {
+  var iframe_height = parseInt($('html').height()); 
+  window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
+});
+
+
+    function confirmPassword()
+    {
+    	alert("welcome");
+    	var pwd=document.getElementById("password");
+    	var cpwd=document.getElementById("confirm");
+    	if(pwd==cpwd)
+    		{
+    		return true;
+    		}
+    	else
+    		{
+    		alert("Password does not match");
+    		    		return false;
+    		}
+    }
+    </script>
+		
+		<title>Register Form</title>
+
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
 
@@ -9,9 +55,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
-    /*
-
-body, html{
+   
+   <!--body-->
+html{
      height: 100%;
  	background-repeat: no-repeat;
  	background-color: #d3d3d3;
@@ -24,8 +70,9 @@ body, html{
 
 h1.title { 
 	font-size: 50px;
-	font-family: 'Passion One', cursive; 
+	font-family: cursive; 
 	font-weight: 400; 
+	color: Green;
 }
 
 hr{
@@ -77,46 +124,16 @@ input::-webkit-input-placeholder {
 }
 
     </style>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+ <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-   <script type="text/javascript">
-        window.alert = function(){};
-        var defaultCSS = document.getElementById('bootstrap-css');
-        function changeCSS(css){
-            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
-            else $('head > link').filter(':first').replaceWith(defaultCSS); 
-        }
-        $( document ).ready(function() {
-          var iframe_height = parseInt($('html').height()); 
-          window.parent.postMessage( iframe_height, 'http://bootsnipp.com');
-        });
-    </script>
+   
  </head>
-<body>
-	<!DOCTYPE html>
-<html lang="en">
-    <head> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-
-		<!-- Website CSS style -->
-		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-		<!-- Website Font style -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-		<title>Register Form</title>
-	</head>
 	<body background="resources/image/background2.jpg">
 		<div class="container">
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	               		<h1 class="title">Register Here</h1>
+	               		<h1 class="title"><u>Register Here</u></h1>
 	               		<hr />
 	               	</div>
 	            </div> 
@@ -124,11 +141,11 @@ input::-webkit-input-placeholder {
 					<form:form class="form-horizontal" method="post" action="Success" name="register" commandName="userregister">
 						
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Enter your First Name</label>
+							<form:label for="name" class="cols-sm-2 control-label" path="fname">Enter your First Name</form:label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="first_name" id="fname"  placeholder="Enter First Name"/>
+									<form:input type="text" class="form-control" name="first_name" id="fname"  placeholder="Enter First Name" path="fname"/>
 								</div>
 							</div>
 						</div>
@@ -137,7 +154,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="last_name" id="lname"  placeholder="Enter Last Name"/>
+									<form:input type="text" class="form-control" name="last_name" id="lname"  placeholder="Enter Last Name" path="lname"/>
 								</div>
 							</div>
 						</div>
@@ -147,17 +164,17 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+									<form:input path="email" type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<label for="username" class="cols-sm-2 control-label">Username<label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+									<form:input path="username" type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
 								</div>
 							</div>
 						</div>
@@ -167,7 +184,7 @@ input::-webkit-input-placeholder {
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password"/>
+									<form:input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password" path="password"/>
 								</div>
 							</div>
 						</div>
@@ -182,21 +199,21 @@ input::-webkit-input-placeholder {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="contact" class="cols-sm-2 control-label">Contact Number</label>
+							<form:label for="contact" class="cols-sm-2 control-label" path="contact_no">Contact Number</form:label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password"/>
+									<form:input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password" path="password"/>
 								</div>
 							</div>
 						</div>
 						
 
 						<div class="form-group ">
-							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
 						</div>
 						<div class="login-register">
-				            <a href="index.php">Login</a>
+				            <a href="login.jsp">Login</a>
 				         </div>
 					</form:form>
 				</div>
@@ -204,11 +221,6 @@ input::-webkit-input-placeholder {
 		</div>
 
 		<!-- script type="text/javascript" src="assets/js/bootstrap.js"></script> -->
-	</body>
-</html>
-	 <script type="text/javascript"> 
 	
-	</script>
- 
- </body>
+	 </body>
 </html>

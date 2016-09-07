@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,11 +16,16 @@ import com.jewel.model.Product;
 public class ProductController {
    @Autowired
 	ProductDAO dao;
+   
 	@RequestMapping("/productTableUsers")
-	public ModelAndView showProduct()
+	public String viewProduct(Model m) //Model is  a  predefined class which helps in making object
 	{
-		List<Product> list=dao.showPro();
-		return new ModelAndView("product","list",list);
+		String list=dao.addProduct();
+		m.addAttribute("list", list);
+		return "product"; //product.jsp
+		
+		//List<Product> list=dao.showPro();
+		//return new ModelAndView("product","list",list);
 	}
 	/*@Autowired
 	ProductDAO prodao;

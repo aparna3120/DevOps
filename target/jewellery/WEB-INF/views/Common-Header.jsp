@@ -26,7 +26,8 @@
 							<li class="active"><a href="index">Home</a></li>
 							<li ><a href="productTableUsers">Products</a></li>
 							<li ><a href="login">Login</a></li>
-							<li ><a href="customer">Register</a></li>	
+							<li ><a href="register">Register</a></li>
+							<li ><a href="AboutUs">About Us</a></li>	
         																
  
    						</ul>

@@ -9,6 +9,11 @@ private long price;
 private int quantity;
 private String decsription;
 private String category;
+
+public Product()
+{
+	
+}
 public String getCategory() {
 	return category;
 }
@@ -53,7 +58,7 @@ public void setDecsription(String decsription) {
 }
 public Product(String product_name, String product_id, String supplier_id, long price, int quantity, String decsription,
 		String category) {
-super();
+
 	this.product_name = product_name;
 	this.product_id = product_id;
 	this.supplier_id = supplier_id;
